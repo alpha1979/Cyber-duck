@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,7 @@ Route::middleware(['auth', 'admin'])->group(function () {
         return view('admin.dashboard');
     });
 });
+
+Route::resource('companies','\App\Http\Controllers\CompanyController');
+
+// Route::get('/companies',[CompanyController::class,'index']);
