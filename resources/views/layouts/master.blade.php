@@ -10,7 +10,7 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -43,7 +43,7 @@
     
 
       <!--Logout section -->
-      <li class="nav-item">
+      <li class="nav-item dropdown">
         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
             {{ Auth::user()->name }}
         </a>
@@ -59,7 +59,7 @@
                 @csrf
             </form>
         </div>
-      </li>
+    </li>
 
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
