@@ -21,6 +21,44 @@ Employees
 ## To use this App
 <ul>
     <li>
-        Clone the product using 
+        Clone the product using https://github.com/alpha1979/Cyber-duck.git
     </li>
+    <li>
+        copy the env.example to .env
+    </li>
+    <li>
+        create the database cyber_duck , user :- root password :- none
+    </li>
+    <li>
+    use cli to install composer dependency 
+    - composer install
+    </li>
+    <li>
+    cli command to generate key
+    - php artisan key:generate
+    </li>
+     <li>
+    you need to migrate the db
+    - php artisan migrate
+    </li>
+     <li>
+    use cli to install composer dependency 
+    - composer install
+    </li> 
+    <li>
+    php artisan db:seed
+    </li>
+    <li>
+      Ready to go :- php artisan serve
+    </li>
+    <li>
+    navigation:-
+    - Views: 
+    - Welcome page http://localhost/
+    - click Dashboard for Admin Pannel (need to authenticate using admin credentials)
+    - login to Normal user (need to login using user@gmail.com )
+
+    </li>
+
+
 </ul>
