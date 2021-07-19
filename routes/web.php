@@ -35,6 +35,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     });
 });
 
-Route::resource('companies','\App\Http\Controllers\CompanyController');
+Route::resources([
+    'companies'=>'CompanyController',
+    'employees'=>'EmployeeController',
+]);
 
 // Route::get('/companies',[CompanyController::class,'index']);

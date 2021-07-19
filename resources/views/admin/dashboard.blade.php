@@ -1,31 +1,20 @@
 @extends('layouts.master')
 @section('adminlte')
-<div class="content">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <div class="card">
+
               <div class="card-header">
-                <h5 class="m-0">Featured</h5>
+                <h5 class="m-0">Main Section</h5>
               </div>
               <div class="card-body">
-                  @if (session('status'))
-                      <div class="alert alert-success" role="alert">
-                          {{ session('status') }}
-                      </div>
-                  @endif
-                <h6 class="card-title">Something else is coming here</h6>
+                
+                
 
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Left side there are two section</li>
+                  <li class="list-group-item">First is Company Information Please click to go there</li>
+                  <li class="list-group-item">Second is Employee Information Please click to go there</li>
+                  <li class="list-group-item">Top right There is Logout link as dropdown feature</li>
+                </ul>
                 
               </div>
-            </div>
-
-        </div>
-        
-       
-      </div>
-      <!-- /.row -->
-    </div><!-- /.container-fluid -->
-  </div>
+ 
 @endsection

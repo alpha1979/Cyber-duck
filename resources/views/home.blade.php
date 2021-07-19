@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                        <h1>Hi Normal User</h1>
+                        <h1>Hi Normal User if you want to use dashboard please sign in as Admin User</h1>
                     {{ __('You are logged in!') }}
                 </div>
             </div>

@@ -40,26 +40,7 @@
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
-        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
-          <i class="fas fa-search"></i>
-        </a>
-        <div class="navbar-search-block">
-          <form class="form-inline">
-            <div class="input-group input-group-sm">
-              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-              <div class="input-group-append">
-                <button class="btn btn-navbar" type="submit">
-                  <i class="fas fa-search"></i>
-                </button>
-                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
-                  <i class="fas fa-times"></i>
-                </button>
-              </div>
-            </div>
-          </form>
-        </div>
-      </li>
+    
 
       <!--Logout section -->
       <li class="nav-item">
@@ -103,10 +84,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+         
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin Guy</a>
+          <a href="#" class="d-block">Admin User</a>
         </div>
       </div>
 
@@ -136,14 +117,14 @@
               </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
+              <li class="nav-item ">
+                <a href="{{route('companies.index')}}" class="nav-link  {{Route::is('companies.index') ? 'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Companies Information</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
+              <li class="nav-item ">
+                <a href="{{route('employees.index')}}" class="nav-link {{Route::is('employees.index') ? 'active':''}}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Employee Information</p>
                 </a>
@@ -172,10 +153,42 @@
       </div><!-- /.container-fluid -->
     </div>
     <!-- /.content-header -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+             
+              @if (isset($errors) && $errors->any())
 
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{$error}}</li>
+                      @endforeach
+                  </ul>
+              </div>
+  
+                  
+              @endif
+              {{-- @if (session()->has('error'))
+                  <div class="alert alert-danger">{{session()->get('error')}}</div>
+              @endif --}}
+              @if (session()->has('success'))
+                  <div class="alert alert-success">{{session()->get('success')}}</div>
+              @endif
     <!-- Main content -->
     @yield('adminlte')
     <!-- /.content -->
+  </div>
+
+    </div>
+
+
+    </div>
+    <!-- /.row -->
+    </div><!-- /.container-fluid -->
+    </div>
   </div>
   <!-- /.content-wrapper -->
 
