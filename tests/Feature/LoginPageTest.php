@@ -46,14 +46,16 @@ class LoginPageTest extends TestCase
     
     public function test_user_can_login_as_admin_credential(){
         $admin = User::factory()->create(['name'=>'Admin','email'=>'admin@admin.com','usertype'=>'admin','password'=>'password']);
-        $response = $this->post('/login',[
-                        'email'=>$admin->email,
-                        
-                        'password'=>$admin->password
-                    ]);
-        $this->assertAuthenticated();
-        $response->get('/dashboard');
-      
+       
         
+        $this->actingAs($admin);
+
+        $request = Request::create('/dashboard', 'GET');
+
+        $middleware = new AdminMiddleware;
+
+        $response = $middleware->handle($request, function () {});
+
+        $this->assertEquals($response, null);
     }
 }
