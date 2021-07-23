@@ -16,6 +16,7 @@ Employees
 <li>Store companies’ logos in storage/app/public folder and make them accessible from public</li>
 <li>Use basic Laravel resource controllers with default methods – index, create, store etc.</li>
 <li>Use Laravel’s paginaXon for showing Companies/Employees list, 10 entries per page</li>
+<li>Carried Out Laravel Feature Test to check if the normal user can login , if normal user can try to login to admin dashboard, if the admin user can login to dashboard</li>
 </ul>
 
 ## To use this App
